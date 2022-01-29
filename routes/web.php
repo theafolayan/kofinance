@@ -41,3 +41,10 @@ Route::get('/index', 'App\Http\Controllers\GymoveadminController@dashboard_1');
 
 
 
+
+Auth::routes();
+Route::get('/register', 'App\Http\Controllers\AuthController@showRegisterPage')->name('register'); 
+Route::get('/login', 'App\Http\Controllers\AuthController@showLoginPage')->name('login');
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

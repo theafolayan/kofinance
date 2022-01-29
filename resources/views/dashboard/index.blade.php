@@ -27,8 +27,8 @@
                   </svg>
                 </span>
                 <div class="media-body">
-                  <p class="fs-14 mb-2">Weekly Progress</p>
-                  <span class="title text-black font-w600">42%</span>
+                  <p class="fs-14 mb-2">Open Wallet Balance</p>
+                  <span class="title text-black font-w600">₦{{auth()->user()->getWallet('open-wallet')->balance}}</span>
                 </div>
               </div>
               <div class="progress" style="height:5px;">
@@ -52,8 +52,8 @@
                   </svg>
                 </span>
                 <div class="media-body">
-                  <p class="fs-14 mb-2">Weekly Progress</p>
-                  <span class="title text-black font-w600">42km</span>
+                  <p class="fs-14 mb-2">Total investments this week</p>
+                  <span class="title text-black font-w600">₦50,000</span>
                 </div>
               </div>
               <div class="progress" style="height:5px;">
@@ -78,8 +78,8 @@
                   </svg>
                 </span>
                 <div class="media-body">
-                  <p class="fs-14 mb-2">Daily Cycling</p>
-                  <span class="title text-black font-w600">230 Km</span>
+                  <p class="fs-14 mb-2">Total Current Investments</p>
+                  <span class="title text-black font-w600">230, 000</span>
                 </div>
               </div>
               <div class="progress" style="height:5px;">
@@ -105,8 +105,8 @@
                   </svg>
                 </span>
                 <div class="media-body">
-                  <p class="fs-14 mb-2">Morning Yoga</p>
-                  <span class="title text-black font-w600">18:34:21”</span>
+                  <p class="fs-14 mb-2">Amount Invested till date</p>
+                  <span class="title text-black font-w600">12,750,000</span>
                 </div>
               </div>
               <div class="progress" style="height:5px;">
@@ -178,7 +178,7 @@
                       <h5 class="fs-16 font-w500 mb-1"><a href="{!! url('/app-profile'); !!}" class="text-black">{{$user->name}}</a></h5>
                       <p class="fs-14">Team Member</p>
                       <div class="d-flex align-items-center justify-content-center">
-                        <a href="{!! url('/app-profile'); !!}" class="btn-link fs-14">Send Message</a>
+                        <a href="{!! url('/app-profile'); !!}" class="btn-link fs-14">View Account</a>
                       </div>
                     </div>
                   </div>
@@ -220,54 +220,27 @@
         <div class="col-xl-12">
           <div class="card featuredMenu">
             <div class="card-header border-0">
-              <h4 class="text-black font-w600 fs-20 mb-0">Featured Diet Menu</h4>
+              <h4 class="text-black font-w600 fs-20 mb-0">Recent Messages</h4>
             </div>
-            <div class="card-body loadmore-content height750 dz-scroll pt-0" id="FeaturedMenusContent">
-              <div class="media mb-4">
-                <img src="{{ asset('images/menus/1.png') }}" width="85" alt="" class="rounded mr-3">
-                <div class="media-body">
-                  <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Chinese Orange Fruit With Avocado Salad</a></h5>
-                  <span class="fs-14 text-primary font-w500">Kevin Ignis</span>
-                </div>
-              </div>
-              <ul class="d-flex flex-wrap pb-2 border-bottom mb-3 justify-content-between">
-                <li class="mr-3 mb-2"><i class="las la-clock scale5 mr-3"></i><span class="fs-14 text-black">4-6 mins </span></li>
-                <li class="mb-2"><i class="fa fa-star-o mr-3 scale5 text-warning" aria-hidden="true"></i><span class="fs-14 text-black font-w500">176 Reviews</span></li>
-              </ul>
-              <div class="media mb-4">
-                <img src="{{ asset('images/menus/2.png') }}" width="85" alt="" class="rounded mr-3">
-                <div class="media-body">
-                  <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Fresh or Frozen (No Sugar Added) Fruits</a></h5>
-                  <span class="fs-14 text-primary font-w500">Olivia Johanson</span>
-                </div>
-              </div>
-              <ul class="d-flex flex-wrap pb-2 border-bottom mb-3 justify-content-between">
-                <li class="mr-3 mb-2"><i class="las la-clock scale5 mr-3"></i><span class="fs-14 text-black">4-6 mins </span></li>
-                <li class="mb-2"><i class="fa fa-star-o mr-3 scale5 text-warning" aria-hidden="true"></i><span class="fs-14 text-black font-w500">176 Reviews</span></li>
-              </ul>
-              <div class="media mb-4">
-                <img src="{{ asset('images/menus/3.png') }}" width="85" alt="" class="rounded mr-3">
-                <div class="media-body">
-                  <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Fresh or Frozen (No Sugar Added) Fruits</a></h5>
-                  <span class="fs-14 text-primary font-w500">Stefanny Raharjo</span>
-                </div>
-              </div>
-              <ul class="d-flex flex-wrap pb-2 border-bottom mb-3 justify-content-between">
-                <li class="mr-3 mb-2"><i class="las la-clock scale5 mr-3"></i><span class="fs-14 text-black">4-6 mins </span></li>
-                <li class="mb-2"><i class="fa fa-star-o mr-3 scale5 text-warning" aria-hidden="true"></i><span class="fs-14 text-black font-w500">176 Reviews</span></li>
-              </ul>
-              <div class="media mb-4">
-                <img src="{{ asset('images/menus/4.png') }}" width="85" alt="" class="rounded mr-3">
-                <div class="media-body">
-                  <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Original Boiled Egg with Himalaya Salt</a></h5>
-                  <span class="fs-14 text-primary font-w500">{{auth()->user()->name}}</span>
-                </div>
-              </div>
-              <ul class="d-flex flex-wrap pb-2 border-bottom mb-3 justify-content-between">
-                <li class="mr-3 mb-2"><i class="las la-clock scale5 mr-3"></i><span class="fs-14 text-black">4-6 mins </span></li>
-                <li class="mb-2"><i class="fa fa-star-o mr-3 scale5 text-warning" aria-hidden="true"></i><span class="fs-14 text-black font-w500">176 Reviews</span></li>
-              </ul>
+         
+         <div class="card-body loadmore-content height750 dz-scroll pt-0" id="FeaturedMenusContent">
+          @foreach ($users as $user )
+          <div class="media mb-4">
+            <img src="{{ $user->getAvatarUrl() }}" width="85" alt="" class="rounded mr-3">
+            <div class="media-body">
+              <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Chinese Orange Fruit With Avocado Salad</a></h5>
+              <span class="fs-14 text-primary font-w500">{{$user->name}}</span>
             </div>
+          </div>
+          
+          <ul class="d-flex flex-wrap pb-2 border-bottom mb-3 justify-content-between">
+            <li class="mr-3 mb-2"><i class="las la-clock scale5 mr-3"></i><span class="fs-14 text-black">Sent 6 minutes ago </span></li>
+            <li class="mb-2"><i class="fa fa-star-o mr-3 scale5 text-warning" aria-hidden="true"></i><span class="fs-14 text-black font-w500">Unread</span></li>
+          </ul>
+          @endforeach
+        </div>
+           
+       
             <div class="card-footer style-1 text-center border-0 pt-0 pb-4">
               <a class="text-primary dz-load-more fa fa-chevron-down" id="FeaturedMenus" href="javascript:void(0);" rel="featured-menu-list">
               </a>

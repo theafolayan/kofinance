@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class GymoveadminController extends Controller
 {
@@ -24,8 +25,10 @@ class GymoveadminController extends Controller
         $event_class="schedule-event";
         $button_class="btn-primary";
         $action = __FUNCTION__;
+
+        $users = User::all();
 		
-        return view('dashboard.index', compact('page_title', 'page_description','action','logo','logoText','active','event_class','button_class'));
+        return view('dashboard.index', compact('page_title', 'users', 'page_description','action','logo','logoText','active','event_class','button_class'));
     }
     
      // Ajax Featured Menu List

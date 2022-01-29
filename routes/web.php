@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
+ Route::get('/', function () {
     return view('welcome');
-}); */
+}); 
 
 // AUTH 
 
@@ -35,7 +35,7 @@ Route::middleware(['guest'])->group(function () {
 
 
 
-Route::get('/', 'App\Http\Controllers\GymoveadminController@dashboard_1');
+// Route::get('/', 'App\Http\Controllers\GymoveadminController@dashboard_1');
 Route::get('/index', 'App\Http\Controllers\GymoveadminController@dashboard_1');
 
 
@@ -48,3 +48,5 @@ Route::get('/login', 'App\Http\Controllers\AuthController@showLoginPage')->name(
 
 
 Route::get('/dashboard', 'App\Http\Controllers\GymoveadminController@dashboard_1')->name('home');
+
+Route::get('home', 'App\Http\Controllers\HomeController@index');

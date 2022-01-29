@@ -25,6 +25,16 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function isAdmin()
+    {
+        return $this->is_admin;
+        # code...
+    }
+
+    public function getAvatarUrl()
+    {
+        return 'https://www.gravatar.com/avatar/' . md5($this->email) . '?s=200';
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

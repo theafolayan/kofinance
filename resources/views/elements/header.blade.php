@@ -676,10 +676,10 @@
           </li>
           <li class="nav-item dropdown header-profile">
             <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-              <img src="{{ asset('images/profile/17.jpg') }}" width="20" alt=""/>
+              <img src="{{ auth()->user()->getAvatarUrl() }}" width="20" alt=""/>
               <div class="header-info">
                 <span class="text-black"><strong>{{auth()->user()->name}}</strong></span>
-                <p class="fs-12 mb-0">Super Admin</p>
+                <p class="fs-12 mb-0">{{auth()->user()->isAdmin() ? "Super Admin" : "User"}}</p>
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">

@@ -308,7 +308,7 @@
                 <img src="{{ asset('images/menus/4.png') }}" width="85" alt="" class="rounded mr-3">
                 <div class="media-body">
                   <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Original Boiled Egg with Himalaya Salt</a></h5>
-                  <span class="fs-14 text-primary font-w500">Peter Parkur</span>
+                  <span class="fs-14 text-primary font-w500">{{auth()->user()->name}}</span>
                 </div>
               </div>
               <ul class="d-flex flex-wrap pb-2 border-bottom mb-3 justify-content-between">

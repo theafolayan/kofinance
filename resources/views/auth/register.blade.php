@@ -47,12 +47,12 @@
                             <div class="form-group"> 
                                 
                                 <label class="mb-1 text-white"><strong>Password</strong></label>
-                                <input type="password" class="form-control" name="password">
+                                <input type="password" class="form-control" name="password" placeholder="********">
                             </div>
                             <div class="form-group"> 
                                 
                                 <label class="mb-1 text-white"><strong>Confirm Password</strong></label>
-                                <input type="password" class="form-control" name="password_confirmation">
+                                <input type="password" class="form-control" name="password_confirmation" placeholder="********">
                             </div>
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn bg-white text-primary btn-block">Sign me up</button>

@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $page_title = 'Dashboard';
+        $page_description = 'Some description for the page';
+        $logo = "images/logo.png";
+        $logoText = "images/logo-text.png";
+        $active="active";
+        $event_class="schedule-event";
+        $button_class="btn-primary";
+        $action = __FUNCTION__;
+		
+        return view('dashboard.index', compact('page_title', 'page_description','action','logo','logoText','active','event_class','button_class'));
     }
 }

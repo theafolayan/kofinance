@@ -23,15 +23,15 @@
           </div>
           <div class="profile-info">
             <div class="profile-photo">
-              <img src="{{ asset('images/profile/profile.png') }}" class="img-fluid rounded-circle" alt="">
+              <img src="{{ $user->getAvatarUrl() }}" class="img-fluid rounded-circle" alt="">
             </div>
             <div class="profile-details">
               <div class="profile-name px-3 pt-2">
-                <h4 class="text-primary mb-0">Mitchell C. Shay</h4>
-                <p>UX / UI Designer</p>
+                <h4 class="text-primary mb-0">{{$user->name}}</h4>
+                <p>Team Member</p>
               </div>
               <div class="profile-email px-2 pt-2">
-                <h4 class="text-muted mb-0">info@example.com</h4>
+                <h4 class="text-muted mb-0">{{$user->email}}</h4>
                 <p>Email</p>
               </div>
               <div class="dropdown ml-auto">
@@ -53,21 +53,10 @@
     <div class="col-xl-4">
       <div class="card">
         <div class="card-body">
-          <div class="profile-statistics mb-5">
+          <div class="profile-statistics mb-2">
             <div class="text-center">
-              <div class="row">
-                <div class="col">
-                  <h3 class="m-b-0">150</h3><span>Follower</span>
-                </div>
-                <div class="col">
-                  <h3 class="m-b-0">140</h3><span>Place Stay</span>
-                </div>
-                <div class="col">
-                  <h3 class="m-b-0">45</h3><span>Reviews</span>
-                </div>
-              </div>
-              <div class="mt-4">
-                <a href="javascript:void()" class="btn btn-primary mb-1 mr-1">Follow</a> 
+              <div class="mt-2">
+                <a href="javascript:void()" class="btn btn-primary mb-1 mr-1">Send Money</a> 
                 <a href="javascript:void()" class="btn btn-primary mb-1" data-toggle="modal" data-target="#sendMessageModal">Send Message</a>
               </div>
             </div>

@@ -47,6 +47,11 @@ Route::get('/register', 'App\Http\Controllers\AuthController@showRegisterPage')-
 Route::get('/login', 'App\Http\Controllers\AuthController@showLoginPage')->name('login');
 
 
-Route::get('/dashboard', 'App\Http\Controllers\GymoveadminController@dashboard_1')->name('home');
+Route::get('/user/{user}', 'App\Http\Controllers\GymoveadminController@app_profile')->name('user.profile');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/dashboard', 'App\Http\Controllers\GymoveadminController@dashboard_1')->name('home');
+});
 
 Route::get('home', 'App\Http\Controllers\HomeController@index');
+Route::get('index', 'App\Http\Controllers\HomeController@index');

@@ -64,17 +64,7 @@ class GymoveadminController extends Controller
         return view('dashboard.workoutplan', compact('page_title', 'page_description','action','logo','logoText'));
     }
 	    // Distance Map
-    public function distance_map()
-    {
-        $page_title = 'Distance Map';
-        $page_description = 'Some description for the page';
-        $logo = "images/logo.png";
-        $logoText = "images/logo-text.png";
-		
-        $action = __FUNCTION__;
-
-        return view('dashboard.distance_map', compact('page_title', 'page_description','action','logo','logoText'));
-    }
+  
     
      // Ajax Recent Activities
     public function recent_activities()
@@ -129,14 +119,15 @@ class GymoveadminController extends Controller
     }
     
 	    // Profile
-    public function app_profile()
+    public function app_profile(User $user)
     {
         $page_title = 'Profile';
         $page_description = 'Some description for the page';
 		
         $action = __FUNCTION__;
+        
 
-        return view('app.profile', compact('page_title', 'page_description','action'));
+        return view('app.profile', compact('page_title', 'user', 'page_description','action'));
     }
 	    // Post Details
     public function post_details()
@@ -192,16 +183,7 @@ class GymoveadminController extends Controller
         return view('chart.morris', compact('page_title', 'page_description','action'));
     }
 	
-	    // Chart Peity
-    public function chart_peity()
-    {
-        $page_title = 'Chart Peity';
-        $page_description = 'Some description for the page';
-		
-        $action = __FUNCTION__;
 
-        return view('chart.peity', compact('page_title', 'page_description','action'));
-    }
 	
 	    // Chart Sparkline
     public function chart_sparkline()
@@ -479,16 +461,6 @@ class GymoveadminController extends Controller
         return view('page.login', compact('page_title', 'page_description','action'));
     }
 	
-	    // Page Register
-    public function page_register()
-    {
-        $page_title = 'Page Register';
-        $page_description = 'Some description for the page';
-		
-		$action = __FUNCTION__;
-
-        return view('page.register', compact('page_title', 'page_description','action'));
-    }
 	
 	    // Table Bootstrap Basic
     public function table_bootstrap_basic()

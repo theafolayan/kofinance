@@ -158,9 +158,9 @@
                     <div class="card-body">
                       <img src="{{ $user->getAvatarUrl() }}" alt="">
                       <h5 class="fs-16 font-w500 mb-1"><a href="{!! url('/app-profile'); !!}" class="text-black">{{$user->name}}</a></h5>
-                      <p class="fs-14">Team Member</p>
+                      <p class="fs-14"> {{ $user->isAdmin() ? 'Admin': "Team Member"}}</p>
                       <div class="d-flex align-items-center justify-content-center">
-                        <a href="{!! url('/app-profile'); !!}" class="btn-link fs-14">View Account</a>
+                        <a href="{{route('user.profile', $user->id)}}" class="btn-link fs-14">View Account</a>
                       </div>
                     </div>
                   </div>

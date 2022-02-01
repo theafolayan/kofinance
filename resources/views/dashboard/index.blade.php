@@ -211,7 +211,7 @@
             <img src="{{ $user->getAvatarUrl() }}" width="85" alt="" class="rounded mr-3">
             <div class="media-body">
               <h5><a href="{!! url('/food-menu'); !!}" class="text-black fs-16">Chinese Orange Fruit With Avocado Salad</a></h5>
-              <span class="fs-14 text-primary font-w500">{{$user->name}}</span>
+              <a href="{{route('user.profile', $user->id)}}"> <span class="fs-14 text-primary font-w500">{{$user->name}}</span> </a>
             </div>
           </div>
           
